@@ -1,8 +1,8 @@
 import java.util.*;
 class linkedList
 {
-      class node
-      {
+	class node
+      	{
             int data;
             node next;
             node(int data)
@@ -17,7 +17,7 @@ class linkedList
 public class Main
 {
       public static void main(String[] args) 
-	  {
+	{
 	      Scanner scn = new Scanner(System.in);
 	      System.out.println("This is a integer type linkedList");
 	      System.out.println("press 0 to  \"Exit\":");
