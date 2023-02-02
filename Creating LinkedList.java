@@ -1,18 +1,66 @@
 import java.util.*;
-class linkedList
+class Linkedlist
 {
-	class node
-      	{
+	class Node
+      {
             int data;
-            node next;
-            node(int data)
+            Node next;
+            Node(int data)
             {
                   this.data=data;
                   next=null;
             }
       }
-      node head;
-      node tail;
+      Node head;
+      public void add(int data)
+      {
+            Node newNode = new Node(data);
+            if(head == null)
+            {
+                  head = newNode;
+            }
+            else
+            {
+                  head.next=newNode;
+                  head=head.next;
+            }
+      }
+      public void addLast(int data)
+      {
+            Node newNode = new Node(data);
+            if(head == null)
+            {
+                  head = newNode;
+            }
+            else
+            {
+                  Node temp = head;
+                  while(temp.next != null)
+                  {
+                        temp=temp.next;
+                  }
+                  temp.next = newNode;
+            }
+      }
+      public void output()
+      {
+            if(head == null)
+            {
+                  System.out.println("List is Empty");
+            }
+            else
+            {
+                  Node temp = head;
+                  System.out.print("Starting of list->");
+                  while(temp !=null)
+                  {
+                        System.out.print(temp.data+" ");
+                        temp=temp.next;
+                  }
+                  System.out.println("null");
+            }
+            
+      }
 }
 public class Main
 {
@@ -26,6 +74,7 @@ public class Main
 	      System.out.println("press 3 and a no. with space to \"Search\":");
 	      System.out.println("press 5 to \"Print\":");
 	      System.out.println("Press 6 and no. with space for \"Deletion\":");
+	      Linkedlist list = new Linkedlist();
 	      while(true)
 	      {
 	            int a=scn.nextInt();
@@ -34,18 +83,24 @@ public class Main
 	                  case 0:
 	                        System.out.print("Program terminated");
 	                        System.exit(0);
+	                        break;
 	                  case 1:
-	                        
+	                        int data1= scn.nextInt();
+	                        list.add(data1);
+	                        break;
 	                  case 2:
-	                        
+	                        int data2= scn.nextInt();
+	                        list.addLast(data2);
+	                        break;
 	                  case 3:
-	                        
+	                        list.output();
+	                        break;
 	                  case 4:
-	                        
+	                        break;
 	                  case 5:
-	                        
+	                        break;
 	                  case 6:
-	                        
+	                        break;
 	                        
 	                 default:
 	                        System.out.println("Invalid operation");
