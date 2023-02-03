@@ -12,7 +12,7 @@ class Linkedlist
             }
       }
       Node head;
-      public void add(int data)
+      public void addFirst(int data)
       {
             Node newNode = new Node(data);
             if(head == null)
@@ -21,8 +21,8 @@ class Linkedlist
             }
             else
             {
-                  head.next=newNode;
-                  head=head.next;
+                  newNode.next=head;
+                  head=newNode;
             }
       }
       public void addLast(int data)
@@ -86,7 +86,7 @@ public class Main
 	                        break;
 	                  case 1:
 	                        int data1= scn.nextInt();
-	                        list.add(data1);
+	                        list.addFirst(data1);
 	                        break;
 	                  case 2:
 	                        int data2= scn.nextInt();
