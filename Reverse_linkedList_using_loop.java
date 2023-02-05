@@ -1,3 +1,4 @@
+import java.util.*;
 class LinkedList
 {
       class Node
@@ -26,39 +27,39 @@ class LinkedList
                   temp2.next = temp;
             }
       }
-      public void reverseloop()
+      public void reverse()
       {
             if(head == null)
             {
-                  println("list is Empty");
+                  System.out.println("list is Empty");
             }
             else
             {
                   Node pre = null;
                   Node cur = head;
-                  while(head.next != null)
+                  while(cur.next != null)
                   {
-                        Node nex = head.next;
-                        head = nex;
-                        head.next = pre;
+                        Node nex = cur.next;
+                        cur.next = pre;
                         pre = cur;
-                        cur = head;
-                        
+                        cur = nex;
                   }
+                  head = cur;
+                  head.next = pre;
             }
       }
       public void print()
       {
             if(head == null)
             {
-                  println("list is Empty");
+                  System.out.println("list is Empty");
             }
             else
             {
                   Node temp = head;
-                  while(temp.next != null)
+                  while(temp != null)
                   {
-                        System.out.print(temp.data +" ")
+                        System.out.print(temp.data +" ");
                         temp = temp.next;
                   }
                   System.out.println();
@@ -72,12 +73,12 @@ public class Main
 		System.out.println("Press 1 space no. to add last in LinkedList");
 		System.out.println("Press 2 to reverse LinkedList");
 		System.out.println("Press 3 to print LinkedList");
-		System.out.println("Press 0 to Terminate program.")
+		System.out.println("Press 0 to Terminate program.");
 		Scanner scn = new Scanner(System.in);
-		int option =scn.nextInt();
 		LinkedList ll = new LinkedList();
 		while(true)
 		{
+		      int option =scn.nextInt();
 		      switch(option)
 		      {
 		            case 0:
