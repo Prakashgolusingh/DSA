@@ -7,7 +7,7 @@ public class Main
 {
 	public static void main(String[] args) {
 	      Scanner scn = new Scanner(System.in);
-	      System.out.print("enter no of vertices and edges with space");
+	      System.out.println("enter no of vertices and edges with space");
 	      int v =scn.nextInt();
 	      int mtx[][]=new int[v][v];
 		for(int i=0;i<v;i++)
