@@ -1,3 +1,4 @@
+# 2864. Maximum Odd Binary Number
 <div class="elfjS" data-track-load="description_content"><p>You are given a <strong>binary</strong> string <code>s</code> that contains at least one <code>'1'</code>.</p>
 
 <p>You have to <strong>rearrange</strong> the bits in such a way that the resulting binary number is the <strong>maximum odd binary number</strong> that can be created from this combination.</p>
