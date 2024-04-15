@@ -13,7 +13,6 @@
  *     }
  * }
  */
-
 class Solution {
     public int sumNumbers(TreeNode root) {
         int result[] = new int[1];
