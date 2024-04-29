@@ -19,8 +19,7 @@ class Solution {
             int temp = Math.max(nums[i]+pre1, pre2);
             pre1 = pre2;
             pre2 = temp;
-        }
-            
+        }   
         return pre2;
     }
 }
