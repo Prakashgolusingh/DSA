@@ -14,6 +14,6 @@ class Solution {
             return dp[amount][step];
         int take = recursion(coins, amount-coins[step], step, dp);
         int not_take = recursion(coins, amount, step-1, dp);
-        return dp[amount][step] = (take + not_take);
+        return dp[amount][step] = (take + not_take); 
     }
 }
